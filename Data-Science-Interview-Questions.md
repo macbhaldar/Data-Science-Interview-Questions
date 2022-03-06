@@ -36,11 +36,14 @@ Logistic Regression is also called as the logit model. It is a method to forecas
 
 ### Difference between Regression and Classification?
 The major difference between Regression and Classification is that Regression results in a continuous quantitative value while Classification is predicting the discrete labels.
-However, there is no clear line that draws the difference between the two. We have a few properties of both Regression and Classification. These are as follows:
+However, there is no clear line that draws the difference between the two. We have a few properties of both Regression and Classification. 
+These are as follows:
+
 **Regression**
 - Regression predicts the quantity.
 - We can have discrete as well as continuous values as input for regression.
 - If input data are ordered with respect to the time it becomes time series forecasting.
+
 **Classification**
 - The Classification problem for two classes is known as Binary Classification.
 - Classification can be split into Multi- Class Classification or Multi-Label Classification.
