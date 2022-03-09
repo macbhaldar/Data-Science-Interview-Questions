@@ -27,10 +27,6 @@ The ACID property is integral to all the commercial databases.
 ACID stands or Atomicity, Consistency, Isolation and Durability.
 When any database follows all these parameters, it becomes fit for any commercial application.
 
-### What is a Query?
-A query is any statement we execute using SQL as the language on our database to get the results.
-The query helps us to define what data we require. In the case of SQL, we only need to specify what output we require.
-
 ### What are Tables and Fields?
 A table is an organized collection of data stored in the form of rows and columns. Columns can be categorized as vertical and rows as horizontal. The columns in a table are called fields while the rows can be referred to as records.
 
@@ -196,4 +192,22 @@ Non-unique indexes, on the other hand, are not used to enforce constraints on th
 Clustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
 The only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.
 Clustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database.
+
+### What is the difference between Clustered and Non-clustered index?
+- Clustered index modifies the way records are stored in a database based on the indexed column. A non-clustered index creates a separate entity within the table which references the original table.
+- Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower.
+- In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
+
+### What is Data Integrity?
+Data Integrity is the assurance of accuracy and consistency of data over its entire life-cycle and is a critical aspect of the design, implementation, and usage of any system which stores, processes, or retrieves data. It also defines integrity constraints to enforce business rules on the data when it is entered into an application or a database.
+
+### What is a Query?
+A query is any statement we execute using SQL as the language on our database to get the results.
+The query helps us to define what data we require. In the case of SQL, we only need to specify what output we require.
+
+### What is a Subquery? What are its types?
+A subquery is a query within another query, also known as a nested query or inner query. It is used to restrict or enhance the data to be queried by the main query, thus restricting or enhancing the output of the main query respectively.
+There are two types of subquery - Correlated and Non-Correlated.
+- **Correlated subquery** cannot be considered as an independent query, but it can refer to the column in a table listed in the FROM of the main query.
+- **Non-correlated subquery** can be considered as an independent query and the output of the subquery is substituted in the main query.
 
