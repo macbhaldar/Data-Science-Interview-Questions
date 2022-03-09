@@ -93,10 +93,12 @@ dataframe = pd.DataFrame( data, index, columns, dtype)
 
 ### How will you combine different pandas dataframes?
 The dataframes can be combines using the below approaches:
-**append() method**: This is used to stack the dataframes horizontally. Syntax:
+- **append() method**: This is used to stack the dataframes horizontally. Syntax:
 ```df1.append(df2)```
-**concat() method**: This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields. Syntax:
+
+- **concat() method**: This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields. Syntax:
 ```pd.concat([df1, df2])```
-**join() method**: This is used for extracting data from various dataframes having one or more common columns.
+
+- **join() method**: This is used for extracting data from various dataframes having one or more common columns.
 ```df1.join(df2)```
 
