@@ -40,9 +40,12 @@ A module-level scope refers to the global objects of the current module accessib
 An outermost scope refers to all the built-in names callable in the program. The objects in this scope are searched last to find the name referenced.
 
 ### What are lists and tuples? What is the key difference between the two?
-Lists and Tuples are both sequence data types that can store a collection of objects in Python. 
-The objects stored in both sequences can have different data types. 
+Lists and Tuples are both sequence data types that can store a collection of objects in Python.
+
+The objects stored in both sequences can have different data types.
+
 Lists are represented with square brackets `['apple', 13, 0.1]`, while tuples are represented with parantheses `('microsoft', 11, 0.96)`.
+
 The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner. 
 
 ### What is __init__?
@@ -91,9 +94,9 @@ dataframe = pd.DataFrame( data, index, columns, dtype)
 ### How will you combine different pandas dataframes?
 The dataframes can be combines using the below approaches:
 **append() method**: This is used to stack the dataframes horizontally. Syntax:
-`df1.append(df2)`
+```df1.append(df2)```
 **concat() method**: This is used to stack dataframes vertically. This is best used when the dataframes have the same columns and similar fields. Syntax:
-`pd.concat([df1, df2])`
+```pd.concat([df1, df2])```
 **join() method**: This is used for extracting data from various dataframes having one or more common columns.
-`df1.join(df2)`
+```df1.join(df2)```
 
