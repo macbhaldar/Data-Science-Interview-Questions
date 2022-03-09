@@ -52,7 +52,8 @@ Constraints are used to specify the rules concerning data in the table. It can b
 The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.
 A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).
 
-```CREATE TABLE Students (   /* Create table with a single field as primary key */
+```
+CREATE TABLE Students (   /* Create table with a single field as primary key */
    ID INT NOT NULL
    Name VARCHAR(255)
    PRIMARY KEY (ID)
@@ -70,12 +71,14 @@ ALTER TABLE Students   /* Set a column as primary key */
 ADD PRIMARY KEY (ID);
 ALTER TABLE Students   /* Set multiple columns as primary key */
 ADD CONSTRAINT PK_Student   /*Naming a Primary Key*/
-PRIMARY KEY (ID, FirstName);```
+PRIMARY KEY (ID, FirstName);
+```
 
 ### What is a UNIQUE constraint?
 A UNIQUE constraint ensures that all values in a column are different. This provides uniqueness for the column(s) and helps identify each row uniquely. Unlike primary key, there can be multiple unique constraints defined per table.
 
-```CREATE TABLE Students (   /* Create table with a single field as unique */
+```
+CREATE TABLE Students (   /* Create table with a single field as unique */
    ID INT NOT NULL UNIQUE
    Name VARCHAR(255)
 );
@@ -92,13 +95,15 @@ ALTER TABLE Students   /* Set a column as unique */
 ADD UNIQUE (ID);
 ALTER TABLE Students   /* Set multiple columns as unique */
 ADD CONSTRAINT PK_Student   /* Naming a unique constraint */
-UNIQUE (ID, FirstName);```
+UNIQUE (ID, FirstName);
+```
 
 ### What is a Foreign Key?
 A FOREIGN KEY comprises of single or collection of fields in a table that essentially refers to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.
 The table with the foreign key constraint is labeled as the child table, and the table containing the candidate key is labeled as the referenced or parent table.
 
-```CREATE TABLE Students (   /* Create table with foreign key - Way 1 */
+```
+CREATE TABLE Students (   /* Create table with foreign key - Way 1 */
    ID INT NOT NULL
    Name VARCHAR(255)
    LibraryID INT
@@ -114,4 +119,5 @@ CREATE TABLE Students (   /* Create table with foreign key - Way 2 */
 
 ALTER TABLE Students   /* Add a new foreign key */
 ADD FOREIGN KEY (LibraryID)
-REFERENCES Library (LibraryID);```
+REFERENCES Library (LibraryID);
+```
