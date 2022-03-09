@@ -121,3 +121,79 @@ ALTER TABLE Students   /* Add a new foreign key */
 ADD FOREIGN KEY (LibraryID)
 REFERENCES Library (LibraryID);
 ```
+### What is a Join? List its different types.
+The SQL Join clause is used to combine records (rows) from two or more tables in a SQL database based on a related column between the two.
+
+![SQL-Joins](https://res.cloudinary.com/practicaldev/image/fetch/s--vmm1_UPm--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/u4rx9tnq7ei4fstlafec.png)
+
+There are four different types of JOINs in SQL:
+1. **(INNER) JOIN**: Retrieves records that have matching values in both tables involved in the join. This is the widely used join for queries.
+```
+SELECT *
+FROM Table_A
+JOIN Table_B;
+SELECT *
+FROM Table_A
+INNER JOIN Table_B;
+```
+2. **LEFT (OUTER) JOIN**: Retrieves all the records/rows from the left and the matched records/rows from the right table.
+```
+SELECT *
+FROM Table_A A
+LEFT JOIN Table_B B
+ON A.col = B.col;
+```
+3. **RIGHT (OUTER) JOIN**: Retrieves all the records/rows from the right and the matched records/rows from the left table.
+```
+SELECT *
+FROM Table_A A
+RIGHT JOIN Table_B B
+ON A.col = B.col;
+```
+4. **FULL (OUTER) JOIN**: Retrieves all the records where there is a match in either the left or right table.
+```
+SELECT *
+FROM Table_A A
+FULL JOIN Table_B B
+ON A.col = B.col;
+```
+
+### What is a Self-Join?
+A self JOIN is a case of regular join where a table is joined to itself based on some relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN clause and a table alias is used to assign different names to the table within the query.
+```
+SELECT A.emp_id AS "Emp_ID",A.emp_name AS "Employee",
+B.emp_id AS "Sup_ID",B.emp_name AS "Supervisor"
+FROM employee A, employee B
+WHERE A.emp_sup = B.emp_id;
+```
+
+### What is a Cross-Join?
+Cross join can be defined as a cartesian product of the two tables included in the join. The table after join contains the same number of rows as in the cross-product of the number of rows in the two tables. If a WHERE clause is used in cross join then the query will work like an INNER JOIN.
+```
+SELECT stu.name, sub.subject 
+FROM students AS stu
+CROSS JOIN subjects AS sub;
+```
+
+![Self-Joins-Cross-Joins](https://assets.interviewbit.com/assets/skill_interview_questions/sql/sql-self-cross-join-ac01aba97313e5f8740292417b156d4cdd524a5c5ac4efc3acd77d38434af4b8.png.gz)
+
+### What is an Index? Explain its different types.
+A database index is a data structure that provides a quick lookup of data in a column or columns of a table. It enhances the speed of operations accessing data from a database table at the cost of additional writes and memory to maintain the index data structure.
+```
+CREATE INDEX index_name   /* Create Index */
+ON table_name (column_1, column_2);
+DROP INDEX index_name;   /* Drop Index */
+```
+- **Unique and Non-Unique Index:**
+Unique indexes are indexes that help maintain data integrity by ensuring that no two rows of data in a table have identical key values. Once a unique index has been defined for a table, uniqueness is enforced whenever keys are added or changed within the index.
+```
+CREATE UNIQUE INDEX myIndex
+ON students (enroll_no);
+```
+Non-unique indexes, on the other hand, are not used to enforce constraints on the tables with which they are associated. Instead, non-unique indexes are used solely to improve query performance by maintaining a sorted order of data values that are used frequently.
+
+- **Clustered and Non-Clustered Index:**
+Clustered indexes are indexes whose order of the rows in the database corresponds to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
+The only difference between clustered and non-clustered indexes is that the database manager attempts to keep the data in the database in the same order as the corresponding keys appear in the clustered index.
+Clustering indexes can improve the performance of most query operations because they provide a linear-access path to data stored in the database.
+
