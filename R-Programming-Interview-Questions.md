@@ -106,6 +106,12 @@ load command is used for storing R objects from a file.
 Syntax: >load(”z.Rdata”)
 ```
 
+### How do you read a CSV file in R?
+We’ve covered this already with the import process. Simply use the read.csv() function.
+```
+Data <- read.csv("Data.csv", header = TRUE)
+```
+
 ### Which function is used for sorting in R?
 order() function is used to perform the sorting.
 
@@ -114,3 +120,16 @@ abline() function is add the reference line to a graph.
 ```
 Syntax: abline(h=yvalues, v=xvalues)
 ```
+
+### What is the use of with() in R?
+We use the with() function to write simpler code by applying an expression to a data set. 
+```
+with(randomDataSet, expression.test(sample))
+```
+
+### What is the use of by() in R?
+We can use by() to apply a function to a data frame split by factors.
+```
+by(data, factor, function, ...)
+```
+
