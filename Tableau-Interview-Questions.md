@@ -13,17 +13,17 @@
 
 ### Explain all data terminologies in Tableau?
 There are several types of data terminologies in Tableau, such as:
-**Bookmark**: A .tbm document in the bookmarks folder in the Tableau repository that contains a single worksheet. It helps in improving data analysis. Unlike, web browser bookmarks, .tbm files are a compatible way to display various studies quickly.
-**Workbook**: A workbook is a file with .twb extension that holds one or more worksheets as well as dashboards and stories.
-**Dashboard**: The dashboard is a combination of several views that are arranged on a single page. In Tableau, dashboards are used to observe and compare a variety of data together, and also it allows interacting with other worksheets.
-**Data Source Page**: Data Source is a page where you can set up your data source. Does this data source page generally consist of four main areas? Join area, left pane, a preview area, and metadata area.
-**Worksheet**: The worksheet is a collection of sheets. It's a place where you build views of your data by dragging various fields onto the shelves.
-**Dimensions**: Dimension is commonly known as a field of categorical data. Dimensions hold discrete data such as members and hierarchies that cannot be aggregated. It also contains characteristic values such as dates, names, and geographical data. The dimensions used to reveal details of your information.
-**Measures**: measures are the measurable quantities of the data, which can be analyzed by a dimension table. Measures are stored in a table which contains foreign keys referring uniquely to the associated dimension tables. The table supports data storage at the atomic level and thus, allows the number of records to be inserted at one time.
+- **Bookmark**: A .tbm document in the bookmarks folder in the Tableau repository that contains a single worksheet. It helps in improving data analysis. Unlike, web browser bookmarks, .tbm files are a compatible way to display various studies quickly.
+- **Workbook**: A workbook is a file with .twb extension that holds one or more worksheets as well as dashboards and stories.
+- **Dashboard**: The dashboard is a combination of several views that are arranged on a single page. In Tableau, dashboards are used to observe and compare a variety of data together, and also it allows interacting with other worksheets.
+- **Data Source Page**: Data Source is a page where you can set up your data source. Does this data source page generally consist of four main areas? Join area, left pane, a preview area, and metadata area.
+- **Worksheet**: The worksheet is a collection of sheets. It's a place where you build views of your data by dragging various fields onto the shelves.
+- **Dimensions**: Dimension is commonly known as a field of categorical data. Dimensions hold discrete data such as members and hierarchies that cannot be aggregated. It also contains characteristic values such as dates, names, and geographical data. The dimensions used to reveal details of your information.
+- **Measures**: measures are the measurable quantities of the data, which can be analyzed by a dimension table. Measures are stored in a table which contains foreign keys referring uniquely to the associated dimension tables. The table supports data storage at the atomic level and thus, allows the number of records to be inserted at one time.
 For example, a Sales table can have a product key, customer key, promotion key, items sold, referring to a specific event.
-**Filters shelf**: Filter shelf is located on the left side of the workbook. Filters shelf is used to exclude the data from a view by filtering it using both dimensions and measures.
-**Pages shelf**: Page shelf is on the left side of the view. With the help of the page shelf, you can split a view into a sequence of pages based on the values and members in a continuous or discrete field. Adding a field with the pages shelf is similar to adding a field in rows shelf. For each new row, a new page is created.
-**Marks card**: Marks card is on the left side of the worksheet. The user can drag fields to the control mark properties such as color, type, shape, size, label, detail, and tooltip.
+- **Filters shelf**: Filter shelf is located on the left side of the workbook. Filters shelf is used to exclude the data from a view by filtering it using both dimensions and measures.
+- **Pages shelf**: Page shelf is on the left side of the view. With the help of the page shelf, you can split a view into a sequence of pages based on the values and members in a continuous or discrete field. Adding a field with the pages shelf is similar to adding a field in rows shelf. For each new row, a new page is created.
+- **Marks card**: Marks card is on the left side of the worksheet. The user can drag fields to the control mark properties such as color, type, shape, size, label, detail, and tooltip.
 
 ### What is the difference between .twb and .twbx extension?
 1. **.twb**
