@@ -26,10 +26,10 @@ For example, a Sales table can have a product key, customer key, promotion key, 
 **Marks card**: Marks card is on the left side of the worksheet. The user can drag fields to the control mark properties such as color, type, shape, size, label, detail, and tooltip.
 
 ### What is the difference between .twb and .twbx extension?
-**.twb**
+1. **.twb**
 - A .twb is an xml document that contains the information about your dashboards, sheets, and stories.
 - A .twbx is a package of files "compressed" together.
-**.twbx**
+2. **.twbx**
 - It doesn't contain any data so to share your workbook, and you have send both workbook file and the data source file of Tableau.
 - It includes data source file and any other file used to produce the workbook, including images.
 
