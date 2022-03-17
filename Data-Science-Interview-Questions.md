@@ -89,6 +89,35 @@ Three disadvantages of the linear model are:
 ### What is logistic regression in Data Science?
 Logistic Regression is also called as the logit model. It is a method to forecast the binary outcome from a linear combination of predictor variables.
 
+Logistic Regression is a Machine Learning classification algorithm that is used to predict the probability of a categorical dependent variable. In logistic regression, the dependent variable is a binary variable that contains data coded as 1 (yes, success, etc.) or 0 (no, failure, etc.). In other words, the logistic regression model predicts P(Y=1) as a function of X.
+
+### What are the Logistic Regression Assumptions?
+- Binary logistic regression requires the dependent variable to be binary.
+- For a binary regression, the factor level 1 of the dependent variable should represent the desired outcome.
+- Only the meaningful variables should be included.
+- The independent variables should be independent of each other. That is, the model should have little or no multicollinearity.
+- The independent variables are linearly related to the log odds.
+- Logistic regression requires quite large sample sizes.
+
+### What is SMOTE?
+SMOTE (Synthetic Minority Oversampling Technique) is an oversampling technique where the synthetic samples are generated for the minority class. This algorithm helps to overcome the overfitting problem posed by random oversampling. It focuses on the feature space to generate new instances with the help of interpolation between the positive instances that lie together.
+
+### What is Recursive Feature Elimination?
+Recursive Feature Elimination (RFE) is based on the idea to repeatedly construct a model and choose either the best or worst performing feature, setting the feature aside and then repeating the process with the rest of the features. This process is applied until all features in the dataset are exhausted. The goal of RFE is to select features by recursively considering smaller and smaller sets of features.
+
+### What are precision, recall, F-measure and support and how to compute them?
+- Precision : The precision is the ratio tp / (tp + fp) where tp is the number of true positives and fp the number of false positives. The precision is intuitively the ability of the classifier to not label a sample as positive if it is negative.
+- REcall : The recall is the ratio tp / (tp + fn) where tp is the number of true positives and fn the number of false negatives. The recall is intuitively the ability of the classifier to find all the positive samples.
+- F-beta : The F-beta score can be interpreted as a weighted harmonic mean of the precision and recall, where an F-beta score reaches its best value at 1 and worst score at 0. The F-beta score weights the recall more than the precision by a factor of beta. beta = 1.0 means recall and precision are equally important.
+- Support : The support is the number of occurrences of each class in y_test.
+```
+from sklearn.metrics import classification_report
+print(classification_report(y_test, y_pred))
+```
+
+### What is ROC curve?
+The receiver operating characteristic (ROC) curve is common tool used with binary classifiers. The dotted line represents the ROC curve of a purely random classifier; a good classifier stays as far away from that line as possible (toward the top-left corner).
+
 ### Difference between Regression and Classification?
 The major difference between Regression and Classification is that Regression results in a continuous quantitative value while Classification is predicting the discrete labels.
 However, there is no clear line that draws the difference between the two. We have a few properties of both Regression and Classification. 
