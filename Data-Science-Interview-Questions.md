@@ -80,6 +80,9 @@ Yes, we can use analysis of covariance technique to capture the association betw
 ### What is a Linear Regression?
 Linear regression is a statistical programming method where the score of a variable ‘X’ is predicted from the score of a second variable ‘Y’. Y is referred to as the predictor variable and X as the criterion variable.
 
+### What is Variance inflation factor?
+Variance inflation factor measures how much the behavior (variance) of an independent variable is influenced, or inflated, by its interaction/correlation with the other independent variables. Variance inflation factors allow a quick measure of how much a variable is contributing to the standard error in the regression.
+
 ### Name three disadvantages of using a linear model
 Three disadvantages of the linear model are:
 1. The assumption of linearity of the errors.
